@@ -1,0 +1,79 @@
+.list__container {
+    margin-top: 20px;
+}
+
+.list__wrapper {
+    width: 100%;
+    max-width: 1024px;
+    gap: 20px;
+}
+
+.list__search {
+    flex: 1;
+    background-color: #febb02;
+    padding: 8px;
+    border-radius: 8px;
+    position: sticky;
+    top: 10px;
+    height: max-content;
+}
+
+.list__search h1{
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.list__result {
+    flex: 3;
+}
+
+.list__item {
+    margin-bottom: 8px;
+    gap: 4px;
+}
+
+.list__item > label {
+    font-size: 12px;
+}
+
+.list__item > input,
+.list__item > span {
+    height: 36px;
+    padding: 4px;
+}
+
+.list__item > input {
+    border: none;
+    display: block;
+    width: 100%;
+}
+
+.list__item > span {
+    background-color: white;
+    cursor: pointer;
+}
+
+.list__options {
+    padding: 12px;
+}
+
+.list__option__item {
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 12px;
+}
+
+input[type="number"] {
+    width: 50px;
+}
+
+.list__search > button {
+    padding: 8px;
+    background-color: var(--color2);
+    color: white;
+    border: none;
+    width: 100%;
+    font-weight: 500;
+    cursor: pointer;
+}

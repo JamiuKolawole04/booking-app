@@ -1,0 +1,94 @@
+.search__item {
+    border: 1px solid gray;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.search__item__desc h1 {
+    font-size: 20px;
+    color: var(--color2);
+}
+
+.search__item img {
+    width: 200px;
+    object-fit: cover;
+    height: 200px;
+}
+
+.search__item__distance,
+.search__item__taxi,
+.search__item__subTitle,
+.search__item__features ,
+.search__item__cancel,
+.search__item__cancelSubTitle,
+.search__item__tax {
+    font-size: 12px;
+}
+
+.search__item__desc {
+    gap: 12px;
+    flex: 2;
+}
+
+.search__item__taxi {
+    background-color: #008009;
+    color: white;
+    width: max-content;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.search__item__subTitle {
+    font-weight: bold;
+}
+
+.search__item__cancel {
+   font-weight: bold;
+   color: #008009;
+}
+
+.search__item__cancelSubTitle {
+    color: #008009;
+}
+
+
+.search__item__details {
+    flex: 1;
+}
+
+.search__item__rating > span{
+   font-weight: 500;
+}
+
+.search__item__rating > button {
+    background-color: var(--color1);
+    color: white;
+    padding: 4px;
+    font-weight: bold;
+    border: none;
+}
+
+.search__item__detailTexts {
+    text-align: right;
+    gap: 4px;
+}
+
+.search__itemPrice {
+    font-size: 24px;
+}
+
+.search__item__tax {
+   color: grey;
+}
+
+.search__item__detailTexts > button {
+   background-color: var(--color2);
+   color: white;
+   font-weight: bold;
+   padding: 12px 4px;
+   border: none;
+   cursor: pointer;
+   border-radius: 4px;
+}

@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+*,
+*::before,
+*::after {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: #003580;
+    --color2: #0071c2;
+}
+
+/* GLOBAL CSS FILE 
+========================== ===============================*/
+@import url("./global.css");
+
+/* NAVBAR
+====================== ===================================*/
+@import url("./components/Navbar/styles/navbar.css");
+
+/* HEADER
+===================== =====================================*/
+@import url("./components/Header/styles/header.css");
+
+/* HOME
+================== =============================================*/
+@import url("./components/Pages/Home/styles/home.css");
+
+/* FEATURED
+==================  =============================================*/
+@import url("./components/Featured/styles/featured.css");
+
+/* PROPERTY LIST
+================= =================================================*/
+@import url("./components/PropertyList/styles/propertylist.css");
+
+/* FEATURED PROPERTIES
+================= ==================================================*/
+@import url("./components/FeaturedProperties/styles/featuredproperties.css");
+
+/* MAIL LIST
+=============== =====================================================*/
+@import url("./components/MailList/styles/mail-list.css");
+
+/* FOOTER
+=============== ======================================================= */
+@import url("./components/Footer/styles/footer.css");
+
+/* LIST
+============= ===========================================================*/
+@import url("./components/Pages/List/styles/list.css");
+
+/* SEARCH ITEM
+============= =============================================================*/
+@import url("./components/SearchItem/styles/searchitem.css");
+
+/* HOTEL
+============= ===============================================================*/
+@import url("./components/Pages/Hotel/styles/hotel.css");

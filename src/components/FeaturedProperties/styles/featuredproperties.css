@@ -1,0 +1,41 @@
+.ft__properties {
+    width: 100%;
+    max-width: 1024px;
+    gap: 20px;
+}
+
+.ft__properties__item {
+    flex: 1;
+    gap: 8px;
+}
+
+img {
+    width: 100%
+}
+
+.ft__property__name {
+    font-weight: bold;
+}
+
+.ft__property__city {
+    font-weight: 300;
+    font-size: 12px;
+    color: gray;
+}
+
+.ft__property__price {
+    font-weight: 500;
+}
+
+.ft__property__rating > button {
+    background-color: var(--color1);
+    color: white;
+    border: none;
+    padding: 4px;
+    margin-right: 12px;
+    font-weight: bold;
+}
+
+.ft__property__rating > span {
+    font-size: 12px;
+}

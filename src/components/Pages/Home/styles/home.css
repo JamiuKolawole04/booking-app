@@ -1,0 +1,10 @@
+.home__container {
+    margin-top: 48px;
+    gap: 28px;
+    color: black;
+}
+
+.home__title {
+    width: 1024px;
+    font-size: 20px;
+}

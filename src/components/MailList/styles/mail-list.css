@@ -16,7 +16,7 @@
 }
 
 .mailInput__container>button {
-    height: 44px;
+    height: 40px;
     background-color: var(--color2);
     color: white;
     font-weight: 500;

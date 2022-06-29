@@ -16,11 +16,12 @@
     object-fit: cover;
 }
 
-.property__list__titles > h1 {
+.property__list__titles>h1 {
+    text-transform: capitalize;
     font-size: 16px;
 }
 
-.property__list__titles > h2 {
+.property__list__titles>h2 {
     font-size: 12px;
     font-weight: 200;
     color: gray;

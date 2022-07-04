@@ -1,6 +1,11 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 
+import { authContext } from "../../context/authContext";
+
 const Navbar = () => {
+    const { user } = useContext(authContext);
+
     const style = {
         color: "inherit",
         textDecoration: "none"
@@ -14,10 +19,11 @@ const Navbar = () => {
                     <span className="logo">zendbooking</span>
                 </Link>
 
-                <div className="nav__items">
-                    <button className="nav__button">Register</button>
-                    <button className="nav__button">Login</button>
-                </div>
+                {user ? user.otherDetails.username :
+                    <div className="nav__items">
+                        <button className="nav__button">Register</button>
+                        <button className="nav__button">Login</button>
+                    </div>}
             </div>
         </div>
     );

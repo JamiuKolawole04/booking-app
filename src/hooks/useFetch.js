@@ -6,6 +6,7 @@ const useFetch = (url) => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
+    const [callback, setCallback] = useState(false)
 
 
     useEffect(() => {
@@ -16,18 +17,19 @@ const useFetch = (url) => {
                     method: "get",
                     url: url
                 });
+                setCallback(true)
                 setData(data)
 
             } catch (err) {
                 // setError here
-                alert(err)
+                setError(err)
             }
             setLoading(false)
         }
 
         fetchData();
 
-    }, [url]);
+    }, [url, callback]);
 
     const reFetch = async () => {
         setLoading(true);
@@ -41,12 +43,12 @@ const useFetch = (url) => {
 
 
         } catch (err) {
-            alert(err)
+            setError(err)
         }
         setLoading(false)
     }
 
-    return { data, loading, error, reFetch };
+    return { data, loading, error, reFetch, setCallback };
 }
 
 export default useFetch;

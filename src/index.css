@@ -61,3 +61,11 @@
 /* HOTEL
 ============= ===============================================================*/
 @import url("./components/Pages/Hotel/styles/hotel.css");
+
+/* LOGIN
+============= ================================================================*/
+@import url("./components/Pages/Login/styles/login.css");
+
+/* REAERVE
+============ ===================================================================*/
+@import url("./components/Reserver/styles/reserve.css");

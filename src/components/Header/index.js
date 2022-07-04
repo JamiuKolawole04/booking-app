@@ -1,14 +1,19 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBed, faPlane, faCar, faTaxi, faCalendarDays, faPerson } from "@fortawesome/free-solid-svg-icons";
 import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css";
-import "react-date-range/dist/theme/default.css"
+import "react-date-range/dist/theme/default.css";
 import { format } from "date-fns";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+
+import { searchContext } from "../../context/searchContext";
+import { authContext } from "../../context/authContext";
 
 const Header = ({ type }) => {
     const navigate = useNavigate();
+    const { dispatch } = useContext(searchContext);
+    const { user } = useContext(authContext);
 
     const [destination, setDestination] = useState("")
     const [openDate, setOpenDate] = useState(false);
@@ -35,7 +40,16 @@ const Header = ({ type }) => {
         });
     };
 
+
     const handleSearch = () => {
+        dispatch({
+            type: "NEW_SEARCH",
+            payload: {
+                destination,
+                date,
+                options
+            }
+        })
         navigate("/hotels", { state: { destination, date, options } });
     }
 
@@ -70,7 +84,8 @@ const Header = ({ type }) => {
                     <>
                         <h1 className="header__title">A lifetime of discount? It's Genius.</h1>
                         <p className="header__desc">Get rewarded for your travels - unlock instant savings of 10% or more with a free Zendbooking account</p>
-                        <button className="header__btn">Sign in / Register </button>
+                        {!user &&
+                            <button className="header__btn">Sign in / Register </button>}
 
                         <div className="header__search d-flex align-items-center justify-content-around">
                             <div className="header__search__item d-flex align-items-center">

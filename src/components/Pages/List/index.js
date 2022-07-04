@@ -6,15 +6,24 @@ import { DateRange } from "react-date-range";
 import Navbar from "../../Navbar";
 import Header from "../../Header";
 import SearchItem from "../../SearchItem";
+import useFetch from "../../../hooks/useFetch";
 
 
 const List = () => {
+
     const location = useLocation();
 
     const [destination, setDestination] = useState(location.state.destination);
     const [date, setDate] = useState(location.state.date);
     const [options, setOptions] = useState(location.state.options);
     const [openDate, setOpenDate] = useState(false)
+    const [min, setMin] = useState(undefined)
+    const [max, setMax] = useState(undefined)
+
+    const { data, loading, error, reFetch } = useFetch(`/hotels?city=${destination.toLowerCase()}&min=${min || 0}&max=${max || 999}`);
+    const handleClick = () => {
+        reFetch();
+    }
 
     return (
         <>
@@ -55,14 +64,22 @@ const List = () => {
                                     <span className="list__option__text">
                                         Min price <small>per night</small>
                                     </span>
-                                    <input type="number" className="list__option__input" />
+                                    <input
+                                        type="number"
+                                        onChange={({ target }) => setMin(target.value)}
+                                        className="list__option__input"
+                                    />
                                 </div>
 
                                 <div className="list__option__item d-flex justify-content-between">
                                     <span className="list__option__text">
                                         Max price <small>per night</small>
                                     </span>
-                                    <input type="number" className="list__option__input" />
+                                    <input
+                                        type="number"
+                                        onChange={({ target }) => setMax(target.value)}
+                                        className="list__option__input"
+                                    />
                                 </div>
 
                                 <div className="list__option__item d-flex justify-content-between">
@@ -103,15 +120,21 @@ const List = () => {
                             </div>
 
                         </div>
-                        <button>Search</button>
+                        <button onClick={handleClick}>Search</button>
                     </div>
                     <div className="list__result">
-                        <SearchItem />
-                        <SearchItem />
-                        <SearchItem />
-                        <SearchItem />
-                        <SearchItem />
-                        <SearchItem />
+                        {loading ? "loading" :
+                            <>
+                                {data.hotels.map((item) => (
+                                    <SearchItem
+                                        item={item}
+                                        key={item._id}
+                                    />
+                                ))}
+                            </>
+
+                        }
+
                     </div>
                 </div>
             </div>

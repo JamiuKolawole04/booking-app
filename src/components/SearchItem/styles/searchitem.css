@@ -20,7 +20,7 @@
 .search__item__distance,
 .search__item__taxi,
 .search__item__subTitle,
-.search__item__features ,
+.search__item__features,
 .search__item__cancel,
 .search__item__cancelSubTitle,
 .search__item__tax {
@@ -45,8 +45,8 @@
 }
 
 .search__item__cancel {
-   font-weight: bold;
-   color: #008009;
+    font-weight: bold;
+    color: #008009;
 }
 
 .search__item__cancelSubTitle {
@@ -58,11 +58,11 @@
     flex: 1;
 }
 
-.search__item__rating > span{
-   font-weight: 500;
+.search__item__rating>span {
+    font-weight: 500;
 }
 
-.search__item__rating > button {
+.search__item__rating>button {
     background-color: var(--color1);
     color: white;
     padding: 4px;
@@ -80,15 +80,15 @@
 }
 
 .search__item__tax {
-   color: grey;
+    color: grey;
 }
 
-.search__item__detailTexts > button {
-   background-color: var(--color2);
-   color: white;
-   font-weight: bold;
-   padding: 12px 4px;
-   border: none;
-   cursor: pointer;
-   border-radius: 4px;
+.search__item__detailTexts>a>button {
+    background-color: var(--color2);
+    color: white;
+    font-weight: bold;
+    padding: 12px 4px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
 }

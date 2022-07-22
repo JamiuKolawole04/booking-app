@@ -34,7 +34,7 @@ const Login = () => {
             });
             dispatch({
                 type: "LOGIN_SUCCESS",
-                payload: data
+                payload: data.details
             });
             navigate("/");
 

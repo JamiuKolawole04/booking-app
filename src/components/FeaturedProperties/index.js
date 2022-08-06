@@ -1,8 +1,8 @@
 import useFetch from "../../hooks/useFetch";
-import ft_img1 from "../../asset/featured_img1.webp";
+// import ft_img1 from "../../asset/featured_img1.webp";
 
 const FeaturedProperties = () => {
-    const { data, loading, error } = useFetch("/hotels?featured=true&limit=4");
+    const { data, loading } = useFetch("/hotels?featured=true&limit=4");
 
     return (
         <div className="ft__properties d-flex justify-content-between">

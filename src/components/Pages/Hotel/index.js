@@ -28,7 +28,7 @@ const Hotel = () => {
     const [slideNumber, setSlideNumber] = useState(0);
     const [open, setOpen] = useState(false);
     const [openModal, setOpenModal] = useState(false);
-    const { data, loading, error, setCallback } = useFetch(`/hotels/${id}`)
+    const { data, loading, setCallback } = useFetch(`/hotels/${id}`)
 
 
     // let photos = [

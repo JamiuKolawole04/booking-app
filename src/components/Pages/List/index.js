@@ -13,14 +13,14 @@ const List = () => {
 
     const location = useLocation();
 
-    const [destination, setDestination] = useState(location.state.destination);
+    const [destination] = useState(location.state.destination);
     const [date, setDate] = useState(location.state.date);
-    const [options, setOptions] = useState(location.state.options);
+    const [options] = useState(location.state.options);
     const [openDate, setOpenDate] = useState(false)
     const [min, setMin] = useState(undefined)
     const [max, setMax] = useState(undefined)
 
-    const { data, loading, error, reFetch } = useFetch(`/hotels?city=${destination.toLowerCase()}&min=${min || 0}&max=${max || 999}`);
+    const { data, loading, reFetch } = useFetch(`/hotels?city=${destination.toLowerCase()}&min=${min || 0}&max=${max || 999}`);
     const handleClick = () => {
         reFetch();
     }

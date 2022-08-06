@@ -5,7 +5,7 @@ import reno from "../../asset/reno.webp";
 
 const Featured = () => {
 
-    const { data, loading, error } = useFetch("/hotels/countByCity?cities=berlin,london,madrid");
+    const { data, loading } = useFetch("/hotels/countByCity?cities=berlin,london,madrid");
     // console.log({ data, loading });
 
     return (
